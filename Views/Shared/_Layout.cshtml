@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Paper &amp; Prose</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site-custom.css" />
+    <link rel="stylesheet" href="~/PaperAndProse.styles.css" asp-append-version="true" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    @using PaperAndProse.Models
+    @using PaperAndProse.Helpers
+    @{
+        var user = Context.Session.GetObject<Account>("LoggedInUser");
+    }
+
+    <header>
+        <div class="fixed-top">
+        <div class="top-bar d-flex justify-content-between align-items-center p-2" style="background-color: #2C2C2C;">
+            <div class="d-flex align-items-center">
+                <img src="~/img/paper-and-prose-logo.png" alt="Logo" style="height: 40px; margin-right: 10px;" />
+                <span style="color: #F5F5DC; font-size: 1.5rem; font-family: Georgia, serif;">Paper &amp; Prose</span>
+            </div>
+
+            <div class="d-flex align-items-center">
+                @if (user != null)
+                {
+                    <div class="dropdown me-2">
+                        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            My Account
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="/Tracking">Track Order</a></li>
+                            <li><a class="dropdown-item" href="/Account/Logout">Sign Out</a></li>
+                        </ul>
+                    </div>
+                }
+                else
+                {
+                    <a href="/Account/Create" class="btn btn-outline-light btn-sm me-2">Create Account</a>
+                }
+                <a asp-controller="Home" asp-action="Cart" class="btn btn-outline-light btn-sm">Cart</a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-sm navbar-dark shadow">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="Shop">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="Categories">Categories</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="About">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </div>
+          </div>
+
+        @if (ViewData["Title"]?.ToString() == "Home")
+        {
+            <img src="~/img/paper-and-prose-banner.jpg"
+                 alt="Banner"
+                 style="margin-top: 110px; width: 100%; height: auto; max-height: 2.5in; object-fit: cover; display: block;" />
+        }
+    </header>
+
+    <main class="flex-fill" style="padding-top: 140px;">
+        @RenderBody()
+    </main>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - Paper &amp; Prose - <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- Floating Chat Bubble -->
+    <div id="chat-bubble" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+        <button id="chat-toggle" class="btn btn-primary rounded-circle shadow d-flex align-items-center justify-content-center"
+                style="width: 70px; height: 70px; font-size: 2rem;">
+            💬
+        </button>
+    </div>
+
+    <!-- Hidden Chat Box -->
+    <!-- Hidden Chat Box -->
+    <div id="chat-box" class="card bg-dark text-white p-3 shadow"
+         style="display: none; width: 280px; position: fixed; bottom: 100px; right: 20px; z-index: 9998; border-radius: 8px;">
+
+<!-- Header -->
+        <div class="d-flex justify-content-between align-items-center"> 
+            <strong>Welcome to Live Chat!</strong>
+            <button id="chat-close" class="btn-close btn-close-white btn-sm" aria-label="Close" style="margin-left: auto;"></button>
+        </div>
+
+        <p class="mt-2">How can we help you?</p>
+
+            <div id="chat-options">
+                <div class="d-grid gap-2 mt-3">
+                    <a href="/Tracking" class="btn btn-outline-light btn-sm">Track an Order</a>
+                    <a href="/Home/Cart" class="btn btn-outline-light btn-sm">View My Cart</a>
+                    <a href="/Home/Shop" class="btn btn-outline-light btn-sm">Shop Now</a>
+                    <a href="/Home/Contact" class="btn btn-outline-light btn-sm">Contact Support</a>
+                    <button class="btn btn-outline-warning btn-sm" id="other-btn">Other</button>
+                </div>
+            </div>
+
+            <div id="chat-thread" style="display: none; max-height: 200px; overflow-y: auto; background-color: #1f1f1f; border-radius: 6px; padding: 8px; margin-top: 10px;"></div>
+
+            <div id="chat-input-section" style="display: none;" class="mt-2">
+                <textarea id="chat-user-input" class="form-control form-control-sm" rows="2" placeholder="Type your message..."></textarea>
+                <button type="button" class="btn btn-light btn-sm mt-2 w-100" id="chat-send-btn">Send</button>
+            </div>
+        </div>
+  
+
+    <script>
+        const toggleButton = document.getElementById('chat-toggle');
+        const chatBox = document.getElementById('chat-box');
+        const otherBtn = document.getElementById('other-btn');
+        const chatOptions = document.getElementById('chat-options');
+        const chatThread = document.getElementById('chat-thread');
+        const chatInputSection = document.getElementById('chat-input-section');
+        const chatSendBtn = document.getElementById('chat-send-btn');
+        const chatInput = document.getElementById('chat-user-input');
+
+        toggleButton?.addEventListener('click', () => {
+            const isVisible = chatBox.style.display === 'block';
+            chatBox.style.display = isVisible ? 'none' : 'block';
+        });
+
+        otherBtn?.addEventListener('click', () => {
+            chatOptions.style.display = 'none';
+            chatThread.style.display = 'block';
+            chatInputSection.style.display = 'block';
+        });
+
+        chatSendBtn?.addEventListener("click", () => {
+            const message = chatInput.value.trim();
+            if (!message) return;
+
+            const userMsg = document.createElement("div");
+            userMsg.className = "text-end text-light mb-2";
+            userMsg.innerHTML = `<span class="badge bg-primary">You</span><br/><span>${message}</span>`;
+            chatThread.appendChild(userMsg);
+
+            chatInput.value = "";
+            chatThread.scrollTop = chatThread.scrollHeight;
+
+            setTimeout(() => {
+                const botMsg = document.createElement("div");
+                botMsg.className = "text-start text-light mb-2";
+                botMsg.innerHTML = `<span class="badge bg-secondary">Paper & Prose</span><br/><span>${getFakeResponse(message)}</span>`;
+                chatThread.appendChild(botMsg);
+                chatThread.scrollTop = chatThread.scrollHeight;
+            }, 1000);
+        });
+
+        function getFakeResponse(input) {
+            const lower = input.toLowerCase();
+            if (lower.includes("order")) return "You can track your order anytime from the 'Track Order' option!";
+            if (lower.includes("shipping")) return "Need to update shipping? Please use our contact form!";
+            if (lower.includes("hours")) return "We're open online 24/7! Replies within 1–2 business days.";
+            return "Thanks for your message! A team member will follow up soon.";
+        }
+
+            const closeBtn = document.getElementById('chat-close');
+        closeBtn?.addEventListener('click', () => {
+        chatBox.style.display = 'none';
+        });
+
+    </script>
+
+    
+
+</body>
+</html>

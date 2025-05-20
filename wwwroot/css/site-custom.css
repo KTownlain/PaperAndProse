@@ -1,0 +1,107 @@
+﻿html, body {
+	height: auto;
+	overflow-y: auto;
+}
+
+body {
+	background-color: #1E1E1E;
+	color: #F5F5DC;
+	font-family: 'Georgia', serif;
+	margin: 0;
+	padding: 0;
+}
+
+.top-bar {
+	background-color: #2C2C2C;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar {
+	background-color: #4B006E !important;
+}
+
+	.navbar a {
+		color: #F5F5DC !important;
+		text-decoration: none;
+		margin-right: 1rem;
+		font-variant: small-caps;
+		font-weight: bold;
+	}
+
+		.navbar a:hover {
+			color: #D8BFD8; /* lighter plum/lavender */
+			text-decoration: underline;
+		}
+
+main {
+	padding: 2rem;
+	padding-bottom: 5rem; /* adds space about the footer */
+	min-height: 100vh; /* ensures page can scroll if needed*/
+}
+
+footer {
+	background-color: #2C2C2C;
+	padding: 1rem 0;
+	text-align: center;
+	font-size: 0.8rem;
+	color: #F5F5DC;
+	margin-top: auto;
+	position: relative;
+}
+
+/* Buttons */
+button, .btn {
+	background-color: #4B006E;
+	color: #FFFFF0;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 8px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+	button:hover, .btn:hover {
+		background-color: #6A1B9A;
+	}
+
+/* Cards */
+.card {
+	background-color: #2C2C2C;
+	border: 1px solid #4B006E;
+	padding: 0.5rem; /* smaller padding */
+	border-radius: 8px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	max-width: 250px; /* Limit card width to make them look bookstore-size */
+	margin: 0 auto; /* Center card */
+}
+
+.book-cover-img {
+	height: 350px;
+	width: auto;
+	object-fit: contain;
+	margin-bottom: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+.card-body {
+	padding: 0.5rem;
+}
+
+.card-title {
+	font-size: 1.1rem;
+	margin-bottom: 0.25rem;
+}
+
+.card-text {
+	font-size: 0.9rem;
+}

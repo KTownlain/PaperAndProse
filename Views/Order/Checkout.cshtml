@@ -1,0 +1,66 @@
+﻿@model PaperAndProse.Models.Order
+
+@{
+	ViewData["Title"] = "Checkout";
+}
+
+<div class="container text-white my-5">
+	<h2 class="mb-4">Checkout</h2>
+
+
+	@if (TempData["Error"] != null)
+	{
+		<div class="alert alert-danger">
+			@TempData["Error"]
+		</div>
+	}
+
+
+	<form asp-action="Checkout" method="post">
+		<div class="mb-3">
+			<label asp-for="Name" class="form-label"></label>
+			<input asp-for="Name" class="form-control" />
+			<span asp-validation-for="Name" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Email" class="form-label"></label>
+			<input asp-for="Email" class="form-control" type="email" />
+			<span asp-validation-for="Email" class="text-danger"></span>
+		</div>
+
+		<div class="mb-3">
+			<label asp-for="Address" class="form-label"></label>
+			<textarea asp-for="Address" class="form-control"></textarea>
+			<span asp-validation-for="Address" class="text-danger"></span>
+		</div>
+		<h4 class="mt-4">Order Summary</h4>
+		<ul>
+			@for (int i = 0; i < Model.CartItems.Count; i++)
+			{
+				var book = Model.CartItems[i];
+			<li>@book.Title - $@book.Price.ToString("0.00")</li>
+
+			<!-- Hidden fields to preserve cart items in form POST -->
+				<input type="hidden" name="CartItems[@i].Id" value="@book.Id" />
+				<input type="hidden" name="CartItems[@i].Title" value="@book.Title" />
+				<input type="hidden" name="CartItems[@i].Author" value="@book.Author" />
+				<input type="hidden" name="CartItems[@i].Condition" value="@book.Condition" />
+				<input type="hidden" name="CartItems[@i].Price" value="@book.Price" />
+				<input type="hidden" name="CartItems[@i].ImagePath" value="@book.ImagePath" />
+			}
+	</ul>
+
+	<p><strong>Total:</strong> $@Model.Total.ToString("0.00")</p>
+	<input type="hidden" name="Total" value="@Model.Total" />
+
+		<div class="d-flex gap-2 mt-3">
+			<a href="/Home/Cart" class="btn btn-outline-light btn-sm px-4 py-2">Back to Cart</a>
+			<button type="submit" class="btn btn-success btn-sm px-4 py-2">Place Order</button>
+		</div>
+</form>
+
+	@section Scripts {
+		<partial name="_ValidationScriptsPartial" />
+	}
+
+</div>

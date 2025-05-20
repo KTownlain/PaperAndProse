@@ -1,0 +1,29 @@
+﻿
+    
+@model PaperAndProse.Models.Order
+
+@{
+	ViewData["Title"] = "Order Confirmation";
+}
+
+<div class="container text-white my-5">
+    <div class="alert alert-success">
+        <h2 class="mb-3">✅ Order has been placed!</h2>
+        <p>Thank you, <strong>@Model.Name</strong>. Your order has been received and will be sent to:</p>
+        <p><em>@Model.Address</em></p>
+    </div>
+
+    <h4 class="mt-4">Order Summary</h4>
+    <ul>
+        @foreach (var book in Model.CartItems)
+        {
+            <li>@book.Title – $@book.Price.ToString("0.00")</li>
+        }
+    </ul>
+    <p><strong>Total:</strong> $@Model.Total.ToString("0.00")</p>
+
+    <div class="mt-4 d-flex gap-3">
+        <a class="btn btn-primary" href="/">Return to Home</a>
+        <a class="btn btn-outline-light" href="/Tracking">Track Order</a>
+    </div>
+</div>

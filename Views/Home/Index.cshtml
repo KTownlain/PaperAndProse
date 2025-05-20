@@ -1,0 +1,77 @@
+﻿@model List<PaperAndProse.Models.Book>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+@using PaperAndProse.Models
+@using PaperAndProse.Helpers
+@{
+    var user = Context.Session.GetObject<Account>("LoggedInUser");
+}
+
+<div class="text-center mt-4">
+    <h1 class="display-5">Welcome to Paper &amp; Prose</h1>
+
+    <p class="lead">Your cozy online corner for secondhand stories and literary treasures.</p>
+
+    <a href="/Home/Shop" class="btn btn-primary mt-3">Shop Now</a>
+
+</div>
+
+<hr class="my-4" />
+
+<div class="row mt-4">
+
+    <div class="text-center mt-5">
+        @if (user != null)
+        {
+            var firstName = user.Name?.Split(' ').FirstOrDefault();
+            <p class="text-white mt-3" style="font-size: 3rem; font-family: 'Georgia', serif; letter-spacing: 0.5px;">
+                Welcome back, <strong>@firstName</strong>!
+            </p>
+    }
+        <h2 class="mb-4">Featured Books</h2>
+    </div>
+
+    <div class="row justify-content-center">
+
+        <div class="row justify-content-center">
+            @foreach (var book in Model)
+            {
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="@Url.Content(book.ImagePath)" class="book-cover-img" alt="@book.Title" />
+                        <div class="card-body">
+                            <h5 class="card-title">@book.Title</h5>
+                            <p class="card-text">$@book.Price – @book.Condition</p>
+                            <a href="/Home/ProductDetail?id=@book.Id" class="btn btn-outline-light mt-3">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+            <div class="mb-5"> </div>
+
+<section class="text-center my-5">
+    <h2 class="mb-3">Why Shop With Us?</h2>
+    <p> Paper & Prose offers thoughtfully selected secondhand books with character and charm. Each purchase supports sustainable reading, affordability, and literary joy.</p>
+    <ul class="list-unstyled mt-3">
+        <li>📚 Gently used, high-quality titles</li>
+        <li>🌱 Eco-friendly and budget-conscious</li>
+        <li>💬 Friendly customer support with real book lovers</li>
+    </ul>
+</section>
+
+            <section class="text-center bg-dark p-4 rounded" style="max-width: 600px; margin: 0 auto;">
+                <h3 class="mb-3 text-light">Stay in the Loop</h3>
+                <p class="text-light">Sign up for updates, book drops, and more!</p>
+                <form>
+                    <div class="input-group">
+
+                        <input type="email" class="form-control" placeholder="Your email address"/>
+                        <button class-"btn btn-primary" type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </section>

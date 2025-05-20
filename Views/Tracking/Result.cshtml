@@ -1,0 +1,61 @@
+﻿@model PaperAndProse.Models.Order
+
+@{
+    ViewData["Title"] = "Order Tracking";
+    var today = DateTime.Now;
+    var deliveryDate = today.AddDays(4); // Simulated 4-day delivery
+
+    var steps = new[]
+    {
+        new { Label = "Order Received", Width = 25 },
+        new { Label = "Shipped", Width = 50 },
+        new { Label = "Out for Delivery", Width = 75 },
+        new { Label = "Delivered", Width = 100 }
+    };
+
+    var random = new Random();
+    var step = steps[random.Next(steps.Length)];
+}
+
+<div class="container text-white my-5">
+    <h2 class="mb-4">📦 Order Tracking</h2>
+
+    <div class="alert alert-info">@ViewBag.Status</div>
+
+    @if (Model != null)
+    {
+        <h5>Estimated Delivery Date:</h5>
+        <p>@deliveryDate.ToString("MMMM dd, yyyy")</p>
+
+        <div class="mb-4">
+            <h5>Delivery Progress:</h5>
+            <div class="progress" style="height: 25px;">
+                <div class="progress-bar bg-success" style="width: @step.Width%;" role="progressbar">
+                    @step.Label
+                </div>
+            </div>
+        </div>
+
+        <h5>Shipping To:</h5>
+        <p>@Model.Address</p>
+
+        <h5>Items:</h5>
+        <ul>
+            @foreach (var book in Model.CartItems)
+            {
+                <li>@book.Title – $@book.Price.ToString("0.00")</li>
+            }
+        </ul>
+
+        <p><strong>Total:</strong> $@Model.Total.ToString("0.00")</p>
+    }
+    else
+    {
+        <div class="alert alert-warning mt-4">
+            No order was found linked to your account.
+        </div>
+    }
+
+    <a href="/" class="btn btn-primary mt-4 me-2">Return to Home</a>
+    <a href="/Home/Contact" class="btn btn-outline-light mt-4">Contact Support</a>
+</div>

@@ -1,0 +1,58 @@
+﻿@model List<PaperAndProse.Models.Book>
+
+@{
+    ViewData["Title"] = "Your Cart";
+    decimal total = Model.Sum(book => book.Price);
+}
+
+<div class="container my-5 text-white">
+    <h2 class="mb-4">Your Cart</h2>
+
+    @if (Model.Count ==0)
+    {
+        <p>Your cart is empty.</p>
+    }
+
+    else
+    {
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Condition</th>
+                    <th>Price</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.Title</td>
+                        <td>@book.Author</td>
+                        <td>@book.Condition</td>
+                        <td>@book.Price.ToString("0.00")</td>
+
+                        <td>
+                            <a asp-controller="Home" asp-action="RemoveFromCart" asp-route-id="@book.Id" class="btn btn-sm btn-danger">
+                                Remove
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>  
+
+        <a asp-controller="Home" asp-action="Shop" class="btn btn-secondary mt-3">Continue Shopping</a>
+        
+        <div class="text-end mt-3">
+            <h5>Total: $@total.ToString("0.00")</h5>
+            <a asp-controller="Order" asp-action="Checkout" class="btn btn-primary mt-2">Proceed to Checkout</a>
+        </div>
+
+    }
+
+    </div>
+  

@@ -1,0 +1,45 @@
+﻿@model List<PaperAndProse.Models.Book>
+
+@{
+    ViewData["Title"] = "Shop";
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-4">Shop Our Collection</h1>
+    <p class="lead">Discover pre-loved books across all genres.</p>
+
+    @{
+        var selectedCategory = Context.Request.Query["category"];
+    }
+
+    @if (!string.IsNullOrEmpty(selectedCategory))
+    {
+        <div class="mt-3">
+            <p class="text-light">
+                <strong>Filtered by:</strong> <em>@selectedCategory</em>
+            </p>
+            <a href="/Home/Shop" class="btn btn-outline-light btn-sm">Clear Filter</a>
+        </div>
+    }
+
+</div>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        @foreach (var book in Model)
+        {
+            <div class="col-md-4 mb-4 d-flex">
+                <div class="card text-white bg-dark shadow flex-fill">
+                    <img src="@Url.Content(book.ImagePath)" class="card-img-top book-cover-img" alt="@book.Title" />
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title">@book.Title</h5>
+                        <p class="card-text"><em>@book.Author</em></p>
+                        <p class="card-text">Condition: @book.Condition</p>
+                        <p class="card-text">Price: $@book.Price</p>
+                        <a href="@Url.Action("ProductDetail", "Home", new { id = book.Id })" class="btn btn-outline-light mt-auto">View Details</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

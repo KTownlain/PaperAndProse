@@ -1,0 +1,39 @@
+﻿@{
+	ViewData["Title"] = "Contact Us";
+}
+
+@using PaperAndProse.Models
+@using PaperAndProse.Helpers
+@{
+	var user = Context.Session.GetObject<Account>("LoggedInUser");
+}
+
+<div class="text-center mt-5 text-white">
+	<h1 class="display-4">Get in Touch</h1>
+	<p class="lead">Have a question? We're here to help!</p>
+</div>
+
+<div class="container text-white my-5" style="max-width: 600px;">
+	<form>
+		<div class="mb-3">
+			<label for="name" class="form-label">Your Name</label>
+			<input type="text" class="form-control" id="name" placeholder="Jane Doe" value="@user?.Name" />
+		</div>
+
+		<div class="mb-3">
+			<label for="email" class="form-label">Your Email</label>
+			<input type="email" class="form-control" id="email" placeholder="you@example.com" value="@user?.Email" />
+		</div>
+
+		<div class="mb-3">
+			<label for="message" class="form-label">Your Message</label>
+			<textarea class="form-control" id="message" rows="5" placeholder="Let us know what’s on your mind..."></textarea>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Send Message</button>
+	</form>
+
+	<p class="text-center text-muted mt-4">
+		Or email us directly at <a href="mailto:hello@paperandprose.com" class="text-light">hello@paperandprose.com</a>
+	</p>
+</div>
