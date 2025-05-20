@@ -1,11 +1,10 @@
 services:
   - type: web
-    name: PaperAndProse
+    name: paperandprose
     runtime: dotnet
     repo: https://github.com/K-Town182/PaperAndProse
     branch: main
-    buildCommand: dotnet build
-    startCommand: dotnet PaperAndProse.dll
-    buildFilter:
-      paths:
-        - '**/*'
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/PaperAndProse.dll
+    region: oregon
+    plan: free
