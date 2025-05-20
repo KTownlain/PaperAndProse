@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: PaperAndProse
+    runtime: dotnet
+    repo: https://github.com/K-Town182/PaperAndProse
+    branch: main
+    buildCommand: dotnet build
+    startCommand: dotnet PaperAndProse.dll
+    buildFilter:
+      paths:
+        - '**/*'
