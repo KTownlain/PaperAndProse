@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|c:\\users\\kayte\\desktop\\capstone\\paperandprose\\paperandprose.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|solutionrelative:paperandprose.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|c:\\users\\kayte\\desktop\\capstone\\paperandprose\\views\\home\\categories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|solutionrelative:views\\home\\categories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|c:\\users\\kayte\\desktop\\capstone\\paperandprose\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|c:\\users\\kayte\\desktop\\capstone\\paperandprose\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -15,16 +19,12 @@
       "RelativeMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|solutionrelative:views\\order\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|c:\\users\\kayte\\desktop\\capstone\\paperandprose\\paperandprose.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|solutionrelative:paperandprose.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|c:\\users\\kayte\\desktop\\capstone\\paperandprose\\views\\home\\shop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|solutionrelative:views\\home\\shop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|c:\\users\\kayte\\desktop\\capstone\\paperandprose\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|c:\\users\\kayte\\desktop\\capstone\\paperandprose\\views\\home\\categories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|solutionrelative:views\\home\\categories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC299421-92FD-4B02-8987-0693F0528F65}|PaperAndProse.csproj|c:\\users\\kayte\\desktop\\capstone\\paperandprose\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -128,7 +128,7 @@
         },
         {
           "DockedWidth": 155,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -136,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "PaperAndProse.csproj",
               "DocumentMoniker": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\PaperAndProse.csproj",
               "RelativeDocumentMoniker": "PaperAndProse.csproj",
@@ -149,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Checkout.cshtml",
               "DocumentMoniker": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\Views\\Order\\Checkout.cshtml",
               "RelativeDocumentMoniker": "Views\\Order\\Checkout.cshtml",
@@ -157,7 +157,8 @@
               "RelativeToolTip": "Views\\Order\\Checkout.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAAAwwDgAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-30T14:24:58.091Z"
+              "WhenOpened": "2025-04-30T14:24:58.091Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -173,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -181,11 +182,12 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-23T21:59:20.701Z"
+              "WhenOpened": "2025-04-23T21:59:20.701Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -193,11 +195,12 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAAPMAAAAAAAAAAAAmwBkBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T16:24:52.347Z"
+              "WhenOpened": "2025-04-29T16:24:52.347Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Categories.cshtml",
               "DocumentMoniker": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\Views\\Home\\Categories.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Categories.cshtml",
@@ -205,7 +208,8 @@
               "RelativeToolTip": "Views\\Home\\Categories.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T16:31:23.128Z"
+              "WhenOpened": "2025-04-29T16:31:23.128Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -221,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Shop.cshtml",
               "DocumentMoniker": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\Views\\Home\\Shop.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Shop.cshtml",

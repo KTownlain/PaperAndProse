@@ -1,0 +1,8 @@
+C:\Users\kayte\Desktop\Capstone\PaperAndProse\obj\Release\net8.0\PubTmp\Out\PaperAndProse.exe
+C:\Users\kayte\Desktop\Capstone\PaperAndProse\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\kayte\Desktop\Capstone\PaperAndProse\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\kayte\Desktop\Capstone\PaperAndProse\obj\Release\net8.0\PubTmp\Out\PaperAndProse.dll
+C:\Users\kayte\Desktop\Capstone\PaperAndProse\obj\Release\net8.0\PubTmp\Out\PaperAndProse.deps.json
+C:\Users\kayte\Desktop\Capstone\PaperAndProse\obj\Release\net8.0\PubTmp\Out\PaperAndProse.runtimeconfig.json
+C:\Users\kayte\Desktop\Capstone\PaperAndProse\obj\Release\net8.0\PubTmp\Out\PaperAndProse.pdb
+C:\Users\kayte\Desktop\Capstone\PaperAndProse\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PaperAndProse")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+874a44b60103771584704f6d0427c865a800114c")]
 [assembly: System.Reflection.AssemblyProductAttribute("PaperAndProse")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PaperAndProse")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

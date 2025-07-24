@@ -128,7 +128,7 @@
         },
         {
           "DockedWidth": 155,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -136,15 +136,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\Models\\Book.cs",
-              "RelativeDocumentMoniker": "Models\\Book.cs",
-              "ToolTip": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\Models\\Book.cs",
-              "RelativeToolTip": "Models\\Book.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T21:55:23.379Z",
+              "DocumentIndex": 0,
+              "Title": "PaperAndProse.csproj",
+              "DocumentMoniker": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\PaperAndProse.csproj",
+              "RelativeDocumentMoniker": "PaperAndProse.csproj",
+              "ToolTip": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\PaperAndProse.csproj",
+              "RelativeToolTip": "PaperAndProse.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-29T23:48:21.548Z",
               "EditorCaption": ""
             },
             {
@@ -161,6 +161,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "Models\\Book.cs",
+              "ToolTip": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\Models\\Book.cs",
+              "RelativeToolTip": "Models\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T21:55:23.379Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\Views\\Shared\\_Layout.cshtml",
@@ -169,8 +181,7 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-23T21:59:20.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T21:59:20.701Z"
             },
             {
               "$type": "Document",
@@ -207,19 +218,6 @@
               "ViewState": "AgIAAAQAAAAAAAAAAAAgwCYAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-29T16:31:54.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PaperAndProse.csproj",
-              "DocumentMoniker": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\PaperAndProse.csproj",
-              "RelativeDocumentMoniker": "PaperAndProse.csproj",
-              "ToolTip": "C:\\Users\\kayte\\Desktop\\Capstone\\PaperAndProse\\PaperAndProse.csproj",
-              "RelativeToolTip": "PaperAndProse.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-29T23:48:21.548Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -303,8 +301,7 @@
               "RelativeToolTip": "Models\\Account.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T16:07:49.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T16:07:49.642Z"
             },
             {
               "$type": "Document",
@@ -352,8 +349,7 @@
               "RelativeToolTip": "Models\\Order.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T14:13:30.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T14:13:30.832Z"
             },
             {
               "$type": "Document",
@@ -413,8 +409,7 @@
               "RelativeToolTip": "Models\\CartItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T23:27:25.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T23:27:25.049Z"
             },
             {
               "$type": "Document",
